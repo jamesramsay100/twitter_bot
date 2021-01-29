@@ -3,6 +3,9 @@ import pandas as pd
 from nltk.tokenize import WordPunctTokenizer
 from bs4 import BeautifulSoup
 from tqdm import tqdm
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
 
 # To set your environment variables in your terminal run the following line:
 # export 'BEARER_TOKEN'='<your_bearer_token>'
@@ -109,9 +112,11 @@ def tweet_cleaner(text):
 if __name__ == "__main__":
 
     USER_IDS = [
-        # 2244994945, # twitter dev
+        # nonsense accounts
         16298441,  # dril
         1174980053668524033, # dril_gpt2
+        531739833,  # @__MICHAELJ0RDAN 
+        # spoof football
         2725825164, # deludedbrendan
         1573649600, # boringmilner
         1065236066, # usasoccerguy
@@ -119,6 +124,7 @@ if __name__ == "__main__":
         288674541, # wengerknowsbest
         2742171811, # bruceatwedding
         88551365,  # TheBig_Sam
+        # football pundits
         394986531,  # PhilippeAuclair
         179707847,  # Jonathan Wilson @jonawils
         92965107,  # Michael Cox @ZonalMarking
@@ -126,6 +132,15 @@ if __name__ == "__main__":
         37896651,  # Henry Winter @henrywinter
         108957853,  # Sid Lowe @sidlowe
         1347812356152287236,  # Iain Macintosh @iainmacintosh
+        3247497561,  # @alanshearer
+        44606764,  # @optajoe
+        182301693,  # @samuelluckhurst
+        2778225595, # fantasyscout1
+        252753618,  # @luisnani
+        287834630,  # @GNev2
+        82916196,  # @SwissRamble
+        1347812356152287236,  # @iainmacintosh
+        166767883,  # @Joey7Barton
     ]
     
     print('Downloading tweets...')
