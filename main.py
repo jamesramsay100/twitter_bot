@@ -36,7 +36,7 @@ def make_tweet(tweet):
 
 if __name__ == "__main__":
 
-    FREQ = 60*60  # seconds per tweet
+    FREQ = 60*60*(os.environ.get('TWEET_FREQ_HR', 1))  # seconds per tweet
 
     while True:
 
